@@ -1,17 +1,13 @@
 import rpg
 import render
+import util
 
 def main():
-
-# get user name
-    user_input = input("What is your name?: ")
-
-    # get gender
-    gender = rpg.Player.get_gender()
-
+    # state
+    name = util.user_input_name()
+    gender = util.user_input_gender()
     # instantiate object
-    player = rpg.Player(user_input, gender, rpg.Player.max_hp)
+    player = rpg.Player(name, gender, rpg.Player.max_hp)
 
 if __name__ == "__main__":
     main()
-
