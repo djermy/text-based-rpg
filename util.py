@@ -32,8 +32,3 @@ def user_input_gender():
                 return 'non-binary'
             else:
                 print("Invalid selection")
-
-def validate_input(input, list):
-        if input not in list or input == "":
-            return "Invalid input"
-        return None
