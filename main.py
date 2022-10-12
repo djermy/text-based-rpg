@@ -11,9 +11,10 @@ def main():
     town = rpg.Locations("Town", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>")
 
     # instantiate object
-    player = rpg.Player(name, gender, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
-    print(base)
-    base.print_description()
+    player = rpg.Player(name, gender, 10, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
+
+    # render
+    player.display_player_bar()
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,5 @@
+import math
+
 # constant list of genders
 GENDERS = ["male", "female", "non-binary"]
 VALID_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -32,3 +34,11 @@ def user_input_gender():
                 return 'non-binary'
             else:
                 print("Invalid selection")
+
+SCALING = 100
+EXPONENT = 1.5
+def xp_required_for_level(level):
+    return SCALING * math.pow(level, EXPONENT)
+
+def calculate_current_level(xp):
+    return math.floor(math.pow(xp / SCALING, 1 / EXPONENT))
