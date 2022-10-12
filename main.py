@@ -1,4 +1,3 @@
-from logging import setLogRecordFactory
 import rpg
 import util
 
