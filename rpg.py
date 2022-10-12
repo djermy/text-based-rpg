@@ -1,10 +1,12 @@
 import render
+import util
 
 class Player:
     max_hp = 100
-    def __init__(self, name, gender, xp, max_hp, health, fatigue, defence, strength, speed, intelligence):
+    def __init__(self, name, gender, level, xp, max_hp, health, fatigue, defence, strength, speed, intelligence):
         self.name = name
         self.gender = gender
+        self.level = level
         self.xp = xp
         self.max_hp = max_hp
         self.health = health
@@ -14,10 +16,15 @@ class Player:
         self.speed = speed
         self.intelligence = intelligence
 
-    def display_player_bar(self, xp, max_hp, health, fatiegue):
+    def display_player_bar(self, level, xp, max_hp, health, fatigue):
+        # print xp/level
+        print("LV. " + str(util.calculate_current_level(self.xp)) + " (XP: " + str(self.xp) + "/" + str(round(util.xp_required_for_level(self.level))) + ")", end="")
+
         # print health
-        print("HP: ", end="")
+        print("\n" + "HP: ", end="")
         render.print_bar(self.health, self.max_hp)
+        
+        # print fatigue
         print("\n" + "FT: ", end="")
         render.print_bar(self.fatigue, 100)
         print()
