@@ -31,8 +31,3 @@ class Player:
         print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
         print()
-
-
-# Lv. 34 (XP: 1024/2000)
-# HP: [=======      ]     50/100
-# FT: [=============]    100/100
