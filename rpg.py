@@ -3,10 +3,10 @@ import util
 
 class Player:
     max_hp = 100
-    def __init__(self, name, gender, level, xp, max_hp, health, fatigue, defence, strength, speed, intelligence):
+    def __init__(self, name, gender, xp, max_hp, health, fatigue, defence, strength, speed, intelligence):
         self.name = name
         self.gender = gender
-        self.level = level
+        self.level = util.calculate_current_level(self.xp)
         self.xp = xp
         self.max_hp = max_hp
         self.health = health
