@@ -44,5 +44,5 @@ class Locations:
     def print_description(self):
         print()
         print(self.description)
-
+        print()
     
