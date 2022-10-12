@@ -6,8 +6,8 @@ class Player:
     def __init__(self, name, gender, xp, max_hp, health, fatigue, defence, strength, speed, intelligence):
         self.name = name
         self.gender = gender
-        self.level = util.calculate_current_level(xp)
         self.xp = xp
+        self.level = util.calculate_current_level(xp)
         self.max_hp = max_hp
         self.health = health
         self.fatigue = fatigue
