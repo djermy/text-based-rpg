@@ -22,11 +22,13 @@ class Player:
         print("LV. " + str(current_level) + " (XP: " + str(self.xp) + "/" + str(required_xp) + ")", end="")
 
         # print health
-        print("\n" + "HP: ", end="")
+        print()
+        print("HP: ", end="")
         render.print_bar(self.health, self.max_hp)
         
         # print fatigue
-        print("\n" + "FT: ", end="")
+        print()
+        print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
         print()
 
