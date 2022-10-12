@@ -6,11 +6,10 @@ def main():
     # state
     name = util.user_input_name()
     gender = util.user_input_gender()
-    xp = 0
     level = util.calculate_current_level(xp)
 
     # instantiate object
-    player = rpg.Player(name, gender, level, xp, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
+    player = rpg.Player(name, gender, level, 0, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
 
     # render
     player.display_player_bar(player.level, player.xp, player.max_hp, player.health, player.fatigue)
