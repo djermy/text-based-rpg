@@ -15,7 +15,7 @@ class Player:
         self.strength = strength
         self.speed = speed
         self.intelligence = intelligence
-
+    
     def display_player_bar(self):
         current_level = util.calculate_current_level(self.xp)
         required_xp = util.xp_required_for_level(current_level + 1)
@@ -30,4 +30,19 @@ class Player:
         print()
         print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
+
         print()
+
+class Locations:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
+    def __repr__(self):
+        return "[{name}]".format(name=self.name)
+    
+    def print_description(self):
+        print()
+        print(self.description)
+        print()
+    
