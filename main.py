@@ -10,7 +10,7 @@ def main():
     # instantiate object
     player = rpg.Player(name, gender, 10, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
     print(areas.game_map["base"])
-    base.print_description()
+    areas.base.print_description()
 
     # render
     player.display_player_bar()
