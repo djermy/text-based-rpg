@@ -1,6 +1,7 @@
 import rpg
 import util
 import areas
+import render
 
 def main():
     # state
@@ -13,7 +14,8 @@ def main():
     areas.base.print_description()
 
     # render
+    render.display_map()
     player.display_player_bar()
-
+    
 if __name__ == "__main__":
     main()
