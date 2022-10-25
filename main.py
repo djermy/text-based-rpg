@@ -16,6 +16,6 @@ def main():
     # render
     render.display_map()
     player.display_player_bar()
-    
+
 if __name__ == "__main__":
     main()
