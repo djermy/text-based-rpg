@@ -1,5 +1,6 @@
 import rpg
 import util
+import render
 
 def main():
     # state
@@ -17,6 +18,7 @@ def main():
 
     # render
     player.display_player_bar()
+    render.print_options()
 
 if __name__ == "__main__":
     main()

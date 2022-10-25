@@ -15,3 +15,18 @@ def print_bar(val, max):
     for i in range(size - num):
       print(" ", end="")
     print("]", end="")
+
+def print_options():
+  print()
+  choice = input("[e]xplore [i]nventory [p]layer [w]ait [q]uit> ").lower()
+  if choice == "e":
+    display_map()
+    return
+  elif choice == "i":
+    pass
+  elif choice == "p":
+    pass
+  elif choice == "w":
+    pass
+  elif choice == "q":
+    quit()
