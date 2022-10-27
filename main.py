@@ -17,6 +17,6 @@ def main():
 
     # render
     player.display_player_bar()
-
+    player.print_player_stats()
 if __name__ == "__main__":
     main()
