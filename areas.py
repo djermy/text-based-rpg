@@ -8,12 +8,14 @@ class Locations:
     
     def print_description(self):
         print()
+        print(self.name)
+        print()
         print(self.description)
         print()
 
-base = Locations("Base", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>")
-forest = Locations("Forest", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>")
-mountains = Locations("Mountains", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>")
-town = Locations("Town", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>")
-
-game_map = {"base": base, "forest": forest, "mountains": mountains, "town": town}
+game_map = {
+    "base": Locations("Base", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>"),
+    "forest": Locations("Forest", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>"),
+    "mountains": Locations("Mountains", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>"),
+    "town": Locations("Town", "<PLACEHOLDER DESCRIPTION, REMOVE AND REPLACE>"),
+}
