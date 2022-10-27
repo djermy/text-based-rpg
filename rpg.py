@@ -19,19 +19,18 @@ class Player:
     def display_player_bar(self):
         current_level = util.calculate_current_level(self.xp)
         required_xp = util.xp_required_for_level(current_level + 1)
-        print("LV. " + str(current_level) + " (XP: " + str(self.xp) + "/" + str(required_xp) + ")", end="")
+        print("LV. " + str(current_level) + " (XP: " + str(self.xp) + "/" + str(round(required_xp)) + ")", end="")
 
         # print health
         print()
         print("HP: ", end="")
         render.print_bar(self.health, self.max_hp)
+        print(" " + str(self.health) + "/" + str(self.max_hp))
         
         # print fatigue
-        print()
         print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
-
-        print()
+        print(" " + str(self.fatigue) + "/" + str(100))
 
 class Locations:
     def __init__(self, name, description):
