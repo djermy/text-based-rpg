@@ -25,7 +25,7 @@ def print_options():
   elif choice == "i":
     pass
   elif choice == "p":
-    pass
+    player.print_player_stats()
   elif choice == "w":
     pass
   elif choice == "q":
