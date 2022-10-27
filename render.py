@@ -20,7 +20,7 @@ def print_options():
   print()
   choice = input("[e]xplore [i]nventory [p]layer [w]ait [q]uit> ").lower()
   if choice == "e":
-    display_map()
+    render.display_map()
     return
   elif choice == "i":
     pass
