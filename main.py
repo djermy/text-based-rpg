@@ -15,6 +15,6 @@ def main():
     render.display_map()
     areas.game_map["base"].print_description()
     player.display_player_bar()
-
+    player.print_player_stats()
 if __name__ == "__main__":
     main()
