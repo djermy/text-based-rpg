@@ -15,6 +15,7 @@ class Player:
         self.strength = strength
         self.speed = speed
         self.intelligence = intelligence
+        self.inventory = []
     
     def display_player_bar(self):
         current_level = util.calculate_current_level(self.xp)

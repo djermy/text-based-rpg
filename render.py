@@ -16,6 +16,10 @@ def print_bar(val, max):
       print(" ", end="")
     print("]", end="")
 
+def print_inventory(inventory):
+  for item in inventory:
+    print(item)
+
 def print_options():
   print()
   choice = input("[e]xplore [i]nventory [p]layer [w]ait [q]uit> ").lower()
@@ -23,7 +27,7 @@ def print_options():
     render.display_map()
     return
   elif choice == "i":
-    pass
+    render.print_inventory(player.inventory)
   elif choice == "p":
     player.print_player_stats()
   elif choice == "w":
