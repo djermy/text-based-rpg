@@ -16,6 +16,25 @@ def print_bar(val, max):
     for i in range(size - num):
       print(" ", end="")
     print("]", end="")
+
+def print_inventory(inventory):
+  for item in inventory:
+    print(item)
+
+def print_options(player):
+  print()
+  choice = input("[e]xplore [i]nventory [p]layer [w]ait [q]uit> ").lower()
+  if choice == "e":
+    display_map()
+    return
+  elif choice == "i":
+    print_inventory(player.inventory)
+  elif choice == "p":
+    player.print_player_stats()
+  elif choice == "w":
+    pass
+  elif choice == "q":
+    quit()
   
 def display_map():
     list_of_areas = [i.upper() for i in areas.game_map.keys()]

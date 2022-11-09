@@ -15,6 +15,8 @@ class Player:
         self.strength = strength
         self.speed = speed
         self.intelligence = intelligence
+        self.inventory = []
+    
 
     def print_player_stats(self):
         print()
