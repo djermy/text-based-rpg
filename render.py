@@ -23,9 +23,9 @@ def print_options():
     render.display_map()
     return
   elif choice == "i":
-    pass
+    main.player.print_inventory()
   elif choice == "p":
-    player.print_player_stats()
+    main.player.print_player_stats()
   elif choice == "w":
     pass
   elif choice == "q":
