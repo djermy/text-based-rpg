@@ -48,16 +48,3 @@ class Player:
         print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
         print(" " + str(self.fatigue) + "/" + str(100))
-
-class Locations:
-    def __init__(self, name, description):
-        self.name = name
-        self.description = description
-
-    def __repr__(self):
-        return "[{name}]".format(name=self.name)
-    
-    def print_description(self):
-        print()
-        print(self.description)
-        print()

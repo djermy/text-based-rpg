@@ -13,11 +13,9 @@ def main():
     player.inventory.append("bucket")
     player.inventory.append("potion")
     
-    # render
-    render.display_map()
-    areas.game_map["base"].print_description()
-    player.display_player_bar()
-    render.print_options(player)
+    while True:
+        areas.game_map["base"].print_description()
+        render.print_options(player)
 
 if __name__ == "__main__":
     main()
