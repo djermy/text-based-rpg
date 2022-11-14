@@ -28,9 +28,10 @@ def print_options(player):
     display_map()
     return
   elif choice == "i":
-    main.player.print_inventory()
+    print("You have:")
+    print_inventory(player.inventory)
   elif choice == "p":
-    main.player.print_player_stats()
+    player.print_player_stats()
   elif choice == "w":
     pass
   elif choice == "q":
