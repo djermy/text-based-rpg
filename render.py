@@ -1,5 +1,6 @@
 import math
 import areas
+import util
 
 def print_bar(val, max):
     size = 20
@@ -20,18 +21,25 @@ def print_bar(val, max):
 def print_inventory(inventory):
   for item in inventory:
     print(item)
+  print()
+  input("[next]")
 
 def print_options(player):
   print()
   choice = input("[e]xplore [i]nventory [p]layer [w]ait [q]uit> ").lower()
   if choice == "e":
+    util.clear_screen()
     display_map()
+    input("[next]")
     return
   elif choice == "i":
+    util.clear_screen()
     print("You have:")
     print_inventory(player.inventory)
   elif choice == "p":
+    util.clear_screen()
     player.print_player_stats()
+    input("[next]")
   elif choice == "w":
     pass
   elif choice == "q":
