@@ -32,7 +32,7 @@ def print_options(player):
     input("[next]")
   if choice == "e":
     util.clear_screen()
-    display_map()
+    display_map(player)
     input("[next]")
     return
   elif choice == "i":
@@ -55,7 +55,7 @@ def print_options(player):
   elif choice == "q":
     quit()
   
-def display_map():
+def display_map(player):
     list_of_areas = [i.upper() for i in areas.game_map.keys()]
     count = 1
     for area in list_of_areas:
@@ -67,3 +67,5 @@ def display_map():
       return display_map()
     else:
       areas.game_map[list_of_areas[int(choice)-1].lower()].print_description()
+      player.display_player_bar()
+      print()
