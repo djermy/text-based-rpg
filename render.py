@@ -58,10 +58,18 @@ def print_options(player):
 def display_map(player):
     list_of_areas = [i.upper() for i in areas.game_map.keys()]
     count = 1
+    valid_options = ["1", "2", "3", "4"]
     for area in list_of_areas:
       print("[" + str(count) + "]" + ". " + area + "\n")
       count += 1
     choice = input("Where to?> ")
+    if util.validate_options_input(valid_options, choice) == False:
+      util.clear_screen()
+      print("Invalid input, please try again")
+      print()
+      input("[next]")
+      display_map(player)
+      return
     if int(choice) > len(list_of_areas):
       print("Invalid selection, please try again")
       return display_map()
