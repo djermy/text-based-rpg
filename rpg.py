@@ -48,3 +48,6 @@ class Player:
         print("FT: ", end="")
         render.print_bar(self.fatigue, 100)
         print(" " + str(self.fatigue) + "/" + str(100))
+
+    def rest(self):
+        self.fatigue = 0

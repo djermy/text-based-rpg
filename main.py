@@ -12,7 +12,7 @@ def main():
     util.clear_screen()
 
     # instantiate object
-    player = rpg.Player(name, gender, 10, rpg.Player.max_hp, 100, 0, 0, 5, 5, 5)
+    player = rpg.Player(name, gender, 10, rpg.Player.max_hp, 100, 50, 0, 5, 5, 5)
     player.inventory.append("bucket")
     player.inventory.append("potion")
     
