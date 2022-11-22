@@ -46,3 +46,9 @@ def calculate_current_level(xp):
 
 def clear_screen():
     return os.system('cls' if os.name == 'nt' else 'clear')
+
+def validate_options_input(options_list, user_input):
+    for option in options_list:
+        if user_input == option:
+            return True
+    return False
