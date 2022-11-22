@@ -19,7 +19,7 @@ def main():
     while True:
         util.clear_screen()
         areas.game_map["base"].print_description()
+        player.display_player_bar()
         render.print_options(player)
-
 if __name__ == "__main__":
     main()

@@ -51,3 +51,4 @@ class Player:
 
     def rest(self):
         self.fatigue = 0
+        print()

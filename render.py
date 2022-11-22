@@ -22,7 +22,6 @@ def print_inventory(inventory):
   for item in inventory:
     print(item)
   print()
-  input("[next]")
 
 def print_options(player):
   valid_options = ["e", "i", "p", "r", "q"]
@@ -30,6 +29,7 @@ def print_options(player):
   choice = input("[e]xplore [i]nventory [p]layer [r]est [q]uit> ").lower()
   if util.validate_options_input(valid_options, choice) == False:
     print("Invalid input, please try again")
+    player.display_player_bar()
     input("[next]")
   if choice == "e":
     util.clear_screen()
@@ -40,6 +40,8 @@ def print_options(player):
     util.clear_screen()
     print("You have:")
     print_inventory(player.inventory)
+    player.display_player_bar()
+    input("[next]")
   elif choice == "p":
     util.clear_screen()
     player.print_player_stats()
@@ -48,6 +50,8 @@ def print_options(player):
     util.clear_screen()
     print("You sit and rest for a few hours.\nYou recover your fatigue")
     player.rest()
+    player.display_player_bar()
+    print()
     input("[next]")
   elif choice == "q":
     quit()
