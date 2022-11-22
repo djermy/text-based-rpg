@@ -25,8 +25,12 @@ def print_inventory(inventory):
   input("[next]")
 
 def print_options(player):
+  valid_options = ["e", "i", "p", "r", "q"]
   print()
   choice = input("[e]xplore [i]nventory [p]layer [r]est [q]uit> ").lower()
+  if util.validate_options_input(valid_options, choice) == False:
+    print("Invalid input, please try again")
+    input("[next]")
   if choice == "e":
     util.clear_screen()
     display_map()
