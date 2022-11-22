@@ -39,9 +39,12 @@ def print_options(player):
   elif choice == "p":
     util.clear_screen()
     player.print_player_stats()
+    input("[next]")
   elif choice == "r":
-    print("You sit and rest for a few hours.\nYou recover you're fatigue")
+    util.clear_screen()
+    print("You sit and rest for a few hours.\nYou recover your fatigue")
     player.rest()
+    input("[next]")
   elif choice == "q":
     quit()
   
