@@ -1,4 +1,5 @@
 import math
+import os
 
 # constant list of genders
 GENDERS = ["male", "female", "non-binary"]
@@ -42,3 +43,6 @@ def xp_required_for_level(level):
 
 def calculate_current_level(xp):
     return math.floor(math.pow(xp / SCALING, 1 / EXPONENT))
+
+def clear_screen():
+    return os.system('cls' if os.name == 'nt' else 'clear')
