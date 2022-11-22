@@ -6,7 +6,7 @@ A text-based rpg game to be played in the terminal.
 
 To play the game, first clone this repository, open a terminal, and navigate to the repository location, then run:
 
-python3 main.py
+`python3 main.py`
 
 ## How to play
 
